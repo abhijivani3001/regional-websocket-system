@@ -1,0 +1,37 @@
+[package]
+name = "regional-websocket-system"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "regional_websocket_system"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1.38.0", features = ["full"] }
+serde = { version = "1.0.203", features = ["derive"] }
+serde_json = "1.0.120"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tracing-actix-web = "0.7"
+actix-web = "4.4"
+actix-ws = "0.2"
+actix = "0.13"
+actix-rt = "2.9"
+config = "0.14"
+dotenv = "0.15"
+reqwest = "0.13.2"
+uuid = { version = "1.6.0", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+futures-util = "0.3"
+futures = "0.3"
+redis = { version = "0.24", features = ["tokio-comp", "connection-manager", "aio"] }
+async-trait = "0.1"
+dashmap = "5.5"
+governor = "0.6"
+nonzero_ext = "0.3"
+anyhow = "1.0"
+thiserror = "1.0"
+
+[dev-dependencies]
+mockall = "0.12"
